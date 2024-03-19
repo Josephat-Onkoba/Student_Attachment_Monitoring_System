@@ -14,15 +14,27 @@ use App\Http\Controllers\DashboardController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+
+Route::get('/register', [AuthController::class, 'register']);
+Route::post('/register', [AuthController::class, 'create_user']);
+Route::get('/register/emailverification',[AuthController::class, 'emailverify']);
+Route::post('/verify/{token}', [AuthController::class, 'verify']);
+
+
+
 
 Route::get('/login', [AuthController::class, 'login']);
 Route::post('/login', [AuthController::class, 'Authlogin']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::get('/register', [AuthController::class, 'register']);
+
+Route::get('/forgot-password', [AuthController::class, 'forgotpassword']);
+Route::post('/forgot-password', [AuthController::class, 'PostForgotPassword']);
+Route::get('/reset/{remember_token}', [AuthController::class, 'reset']);
+Route::post('/reset/{remember_token}', [AuthController::class, 'Postreset']);
 
 
 Route::get('/admin/admin/list', function () {

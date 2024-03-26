@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AttachmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,7 @@ Route::get('/', function () {
 Route::get('/register', [AuthController::class, 'register']);
 Route::post('/register', [AuthController::class, 'create_user']);
 Route::get('/register/emailverification',[AuthController::class, 'emailverify']);
-Route::post('/verify/{token}', [AuthController::class, 'verify']);
+Route::get('/verify/{token}', [AuthController::class, 'verify']);
 
 
 
@@ -56,4 +57,9 @@ Route::group(['middleware' => 'staff'], function(){
 
 Route::group(['middleware' => 'student'], function(){
     Route::get('/student/dashboard', [DashboardController::class, 'dashboard']);
+    Route::get('/student/attachment/info', [DashboardController::class, 'dashboard']);
+    Route::get('admin/attachment/add', [AttachmentController::class, 'add']);
+    Route::post('admin/attachment/add', [AttachmentController::class, 'insert']);
+    Route::get('admin/attachment/edit/{id}', [AttachmentController::class, 'edit']);
+    Route::post('admin/attachment/edit/{id}', [AttachmentController::class, 'update']);
 });

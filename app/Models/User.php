@@ -32,6 +32,11 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->attributes['name'] = $this->attributes['first_name'] . ' ' . $this->attributes['last_name'];
     }
 
+    public function isFirstLogin()
+    {
+        return is_null($this->first_login_at);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -49,7 +54,8 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        'password' => 'hashed', 
+        'first_login_at' => 'datetime',
     ];
 
     static public function getEmailSingle($email)
@@ -61,5 +67,4 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return self::where('remember_token', '=',$remember_token)->first();
     }
-
 }

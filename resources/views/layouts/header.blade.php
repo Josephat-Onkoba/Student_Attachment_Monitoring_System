@@ -148,12 +148,101 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href=" {{ url('/HOD/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Department Management
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/HOD/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Student
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/HOD/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar"></i>
+              <p>
+                Attachment
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/HOD/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-bell"></i>
+              <p>
+                Staff
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/HOD/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-comments"></i>
+              <p>
+                Direct chat
+              </p>
+            </a>
+          </li>
         @elseif(Auth::user()->user_type==3)
         <li class="nav-item">
             <a href=" {{ url('/staff/dashboard')}}" class="nav-link @if( Request::segment(2) == 'dashboard') active @endif">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/staff/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                View student
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/staff/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Supervisor Notes
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/staff/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar"></i>
+              <p>
+                Reports and Evaluation
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/staff/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-check-circle"></i>
+              <p>
+                Approve Attachment Completion
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/staff/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-comments"></i>
+              <p>
+                Direct chat
               </p>
             </a>
           </li>
@@ -166,10 +255,64 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/student/attachment/info')}}" class="nav-link @if( Request::segment(2) == 'attachment') active @endif">
+              <i class="nav-icon fas fa-paperclip"></i>
+              <p>
+                Attachment
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/student/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Supervisor
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/student/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Logbook
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/student/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar"></i>
+              <p>
+                Reports
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/student/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-bell"></i>
+              <p>
+                Notifications/Reminders
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href=" {{ url('/student/dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-comments"></i>
+              <p>
+                Direct chat
+              </p>
+            </a>
+          </li>
         @endif
           <li class="nav-item">
             <a href="{{url('/logout')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Logout
               </p>

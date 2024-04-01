@@ -32,7 +32,7 @@
             <div class="icon">
             <i class="nav-icon fas fa-graduation-cap"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{url('/HOD/student/list')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -47,7 +47,7 @@
             <div class="icon">
             <i class="nav-icon fas fa-user-tie"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{url('/HOD/staff/view')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -62,7 +62,7 @@
             <div class="icon">
             <i class="nav-icon fas fa-briefcase"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{url('/HOD/attachment/list')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

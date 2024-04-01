@@ -30,13 +30,17 @@
                                     </small></p>
                                 <div class="btn-group" role="group">
                                     <form action="{{ route('notes.destroy', $note->id) }}" method="post">
-                                        @csrf
+                                        {{@csrf_field()}}
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-link text-danger" title="Delete Note">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
                                     </form>
                                 </div>
                                 <div class="btn-group ml-2" role="group">
-                                    <a href="{{ route('notes.edit', $note->id) }}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ route('notes.edit', $note->id) }}" class="btn btn-link text-primary" title="Edit Note">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
                                 </div>
 
                             </li>

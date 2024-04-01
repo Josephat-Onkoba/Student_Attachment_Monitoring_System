@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\DB;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -25,6 +26,37 @@ class User extends Authenticatable implements MustVerifyEmail
         'reg_no',
         'password',
     ];
+    public function scopeUserType4($query)
+    {
+        return $query->where('user_type', 4);
+    }
+
+    public function attachments()
+    {
+        return $this->hasMany(AttachmentModel::class, 'user_id');
+    }
+
+    public function supervisedStudents()
+    {
+        return $this->belongsToMany(User::class, 'staff_student', 'staff_id', 'student_id')
+                    ->withPivot('allocation_date');
+    }
+
+    public function supervisingStaff()
+    {
+        return $this->belongsToMany(User::class, 'staff_student', 'student_id', 'staff_id')
+                    ->withPivot('allocation_date');
+    }
+
+    public function hasReachedMaxStudents()
+    {
+        $studentCount = DB::table('staff_student')
+            ->where('staff_id', $this->id)
+            ->count();
+
+        return $studentCount >= 5;
+    }
+
 
         public function setNameAttribute($value)
     {

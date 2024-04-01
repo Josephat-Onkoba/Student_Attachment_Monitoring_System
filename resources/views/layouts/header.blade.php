@@ -59,7 +59,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href=" {{ url('/HOD/dashboard')}}" class="nav-link">
+            <a href=" {{ url('/HOD/student/list')}}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Student
@@ -68,7 +68,7 @@
           </li>
 
           <li class="nav-item">
-            <a href=" {{ url('/HOD/dashboard')}}" class="nav-link">
+            <a href=" {{ url('/HOD/attachment/list')}}" class="nav-link">
             <i class="nav-icon fas fa-briefcase"></i>
               <p>
                 Attachment
@@ -77,7 +77,7 @@
           </li>
 
           <li class="nav-item">
-            <a href=" {{ url('/HOD/dashboard')}}" class="nav-link">
+            <a href=" {{ url('/HOD/staff/view')}}" class="nav-link">
               <i class="nav-icon fas fa-bell"></i>
               <p>
                 Staff
@@ -93,7 +93,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href=" {{ url('/HOD/dashboard')}}" class="nav-link">
+            <a href=" {{ url('/chatify')}}" class="nav-link">
               <i class="nav-icon fas fa-comments"></i>
               <p>
                 Direct chat
@@ -111,7 +111,7 @@
           </li>
 
           <li class="nav-item">
-            <a href=" {{ url('/staff/dashboard')}}" class="nav-link">
+            <a href=" {{ url('/staff/view/assigned-sudent')}}" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 View student
@@ -147,7 +147,7 @@
           </li>
 
           <li class="nav-item">
-            <a href=" {{ url('/staff/dashboard')}}" class="nav-link">
+            <a href=" {{ url('/chatify')}}" class="nav-link">
               <i class="nav-icon fas fa-comments"></i>
               <p>
                 Direct chat
@@ -174,7 +174,7 @@
           </li>
 
           <li class="nav-item">
-            <a href=" {{ url('/student/dashboard')}}" class="nav-link @if( Request::segment(2) == 'supervisor') active @endif">
+            <a href=" {{ url('/student/assigned-supervisor')}}" class="nav-link @if( Request::segment(2) == 'supervisor') active @endif">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Supervisor
@@ -210,7 +210,7 @@
           </li>
 
           <li class="nav-item">
-            <a href=" {{ url('/student/directchat')}}" class="nav-link @if( Request::segment(2) == 'directchat') active @endif">
+            <a href=" {{ url('/chatify')}}" class="nav-link @if( Request::segment(2) == 'directchat') active @endif">
               <i class="nav-icon fas fa-comments"></i>
               <p>
                 Direct chat

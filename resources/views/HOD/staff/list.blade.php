@@ -38,7 +38,6 @@
                                             <th>Last Name</th>
                                             <th>Email</th>
                                             <th>Staff Number</th>
-                                            <th>Action</th> <!-- New column for action -->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -48,9 +47,6 @@
                                             <td>{{ $staff->last_name }}</td>
                                             <td>{{ $staff->email }}</td>
                                             <td>{{ $staff->staff_no }}</td>
-                                            <td>
-                                                <a href="#" class="btn btn-primary">Assign Student</a> <!-- Assign Student button -->
-                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>

@@ -111,7 +111,7 @@
           </li>
 
           <li class="nav-item">
-            <a href=" {{ url('/staff/view/assigned-sudent')}}" class="nav-link">
+            <a href=" {{ url('/staff/view/assigned-student')}}" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 View student

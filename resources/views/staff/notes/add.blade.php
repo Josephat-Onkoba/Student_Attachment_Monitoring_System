@@ -27,8 +27,8 @@
                 <textarea class="form-control" id="content" name="content" rows="3"></textarea>
             </div>
             <div class="text-left">
-                <button type="button" class="btn btn-primary">
-                    <a href="{{ url('/staff/notes/add') }}" style="color: white; text-decoration: none;">
+                <button type="submit" class="btn btn-primary">
+                    <a href="{{ url('/staff/notes/view') }}" style="color: white; text-decoration: none;">
                         <i class="fas fa-plus-circle"></i> Add a note
                     </a>
                 </button>

@@ -19,7 +19,7 @@
     "bootstrap": "^5.2.3",
     "express": "^4.22.1",
     "socket.io": "^4.8.3",
-    "socket.io-client": "^4.7.5"
+    "socket.io-client": "^4.8.3"
   },
   "name": "student_attachment_management_system",
   "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\" alt=\"Laravel Logo\"></a></p>",
